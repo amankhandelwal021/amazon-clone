@@ -22,7 +22,7 @@ const ProductCard = ({
 
       <div className="mt-6 flex flex-col items-center">
 
-      <Image src={image} height={200} width={200} objectFit="contain" />
+      <Image src={image} height={200} width={200} objectFit="contain" alt="" />
 
       </div>
 

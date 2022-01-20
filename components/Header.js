@@ -13,6 +13,7 @@ const Header = () => {
             height={40}
             className="cursor-pointer"
             objectFit="contain"
+            alt=""
           />
         </div>
         <div className="items-center flex">
