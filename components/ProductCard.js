@@ -23,8 +23,8 @@ const ProductCard = ({
       <div className="mt-9 flex flex-col items-center">
         <Image
           src={image}
-          height={200}
-          width={200}
+          height={150}
+          width={150}
           objectFit="contain"
           alt=""
         />
@@ -94,7 +94,7 @@ const ProductCard = ({
             ></path>
           </svg>
         </span>
-        <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-black">
+        <span className="relative w-full text-center transition-colors duration-200 ease-in-out group-hover:text-black">
           Add To Cart
         </span>
       </a>
