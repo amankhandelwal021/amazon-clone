@@ -21,7 +21,7 @@ const ProductFeed = ({ products }) => {
         
     {<img src="https:links.papareact.com/dyz" alt="" className="md:col-span-full"/>}
         
-        <div className="md:col-span-2">
+        {/* <div className="md:col-span-2">
         {products.slice(4, 5).map(({ id, title, price, description, category, image, rating }) => (
            <ProductCard 
            
@@ -36,7 +36,7 @@ const ProductFeed = ({ products }) => {
 
            />
         ))}
-        </div>
+        </div> */}
 
         {products.slice(5, products.length).map(({ id, title, price, description, category, image, rating }) => (
            <ProductCard 
