@@ -59,7 +59,7 @@ const Header = () => {
             <MenuAlt1Icon className="h-5 w-5 hover:cursor-pointer"/>
             <p className="hidden sm:flex hover:cursor-pointer">All</p>
             <p className="hover:cursor-pointer">Amazon Prime</p>
-            <p className="hover:cursor-pointer">Today's Best</p>
+            <p className="hover:cursor-pointer">Todays Best</p>
             <p className="hidden sm:flex hover:cursor-pointer">Fresh</p>
             <p className="hover:cursor-pointer">Amazon Pay</p>
             <p className='hidden md:flex hover:cursor-pointer'>Gift Card</p>

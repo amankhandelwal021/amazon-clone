@@ -32,7 +32,7 @@ const ProductCard = ({
         {Array(ratings)
           .fill()
           .map((_, i) => (
-            <StarIcon className="h-5 text-yellow-400" />
+            <StarIcon className="h-5 text-yellow-400" key={i} />
           ))}
       </div>
 
@@ -58,10 +58,10 @@ const ProductCard = ({
     <span className="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
         <svg className="w-5 h-5 text-amazon_blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
     </span>
-    <span class="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
+    <span className="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
         <svg className="w-5 h-5 text-amazon_blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
     </span>
-    <span class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-black">Add To Cart</span>
+    <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-black">Add To Cart</span>
 </a>
 
       {/* <button className="p-2 text-xs md:text-sm bg-gradient-to-b from-yellow-200 to-yellow-400 border border-yellow-300 rounded-sm active:from-yellow-500 mt-4">
