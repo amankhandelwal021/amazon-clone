@@ -2,26 +2,27 @@ import Image from "next/image";
 import React from "react";
 import Header from "../components/Header";
 
-const login = () => {
+const Login = () => {
   return (
     <div>
       <Header />
 
       <div className="flex flex-col items-center mt-4 justify-center h-72">
         <div className="flex flex-col items-center">
-          <Image
+          <img
             src="https://cdn.cdo.mit.edu/wp-content/uploads/sites/67/2019/11/Amazon-logo.png"
+            alt=""
             height={100}
             width={200}
           />
-          <p className="text-lg font-semibold italic">
+          <p className="text-lg font-semibold italic" >
             This is the Amazon clone, made just for the learning purpose...
           </p>
         </div>
 
         <a
           href=""
-          className="my-5 relative inline-flex items-center px-12 py-3 overflow-hidden text-base font-semibold text-amazon_blue border-2 border-amazon_blue rounded-full hover:text-white group hover:bg-gray-50"
+          className="my-5 relative inline-flex items-center px-12 py-3 overflow-hidden text-base font-semibold text-amazon_blue border-2 border-gray-200 rounded-full hover:text-white group hover:bg-gray-50"
         >
           <span className="absolute left-0 block w-full h-0 transition-all bg-amazon_blue opacity-100 group-hover:h-full top-1/2 group-hover:top-0 duration-400 ease"></span>
           <span className="absolute right-0 flex items-center justify-start w-10 h-10 duration-300 transform translate-x-full group-hover:translate-x-0 ease">
@@ -47,4 +48,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;

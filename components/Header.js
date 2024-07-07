@@ -1,10 +1,15 @@
 import Image from "next/image";
 import React from "react";
 import { LocationMarkerIcon, SearchIcon, ShoppingCartIcon, MenuAlt1Icon } from "@heroicons/react/outline";
+import { useRouter } from "next/router";
+import { useSession, signIn, signOut } from "next-auth/react"
 
 const Header = () => {
+  const router = useRouter();
+  const { data: session } = useSession()
+
   return (
-    <header className='sticky top-0 z-50'>
+    <div className='sticky top-0 z-50'>
       <div className="flex items-center bg-amazon_blue p-1 flex-grow py-2">
         <div className="mt-2 flex items-center flex-grow sm:flex-grow-0">
           <Image
@@ -14,6 +19,7 @@ const Header = () => {
             className="cursor-pointer"
             objectFit="contain"
             alt=""
+            onClick={() => router.push('/')}
           />
         </div>
         <div className="items-center flex">
@@ -33,7 +39,9 @@ const Header = () => {
             <input type="text" className="p-2 h-full w-6 flex-grow flex-shrink rounded-l-md focus:outline-none px-4" />
             <SearchIcon className="h-12 p-4 "/>
         </div>
-        <div className="text-white text-[13px] mx-4 flex flex-col items-start headerOption">
+        <div className="text-white text-[13px] mx-4 flex flex-col items-start headerOption"
+        onClick={() => signIn()}
+        >
             <div className="text-[10px] sm:text-[12px]">
               <p>Hello, Aman</p>
             </div>
@@ -69,7 +77,7 @@ const Header = () => {
             <p className='hidden lg:flex hover:cursor-pointer'>Smartphone</p>
             <p className='hidden lg:flex hover:cursor-pointer'>Accessories</p>
         </div>
-    </header>
+    </div>
   );
 };
 

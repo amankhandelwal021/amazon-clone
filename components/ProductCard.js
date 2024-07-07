@@ -1,7 +1,9 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { StarIcon } from "@heroicons/react/solid";
 import Currency from "react-currency-formatter";
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 const ProductCard = ({
   id,
@@ -14,8 +16,14 @@ const ProductCard = ({
 }) => {
   const [ratings] = useState(Math.floor(Math.random() * (5 - 1 + 1)) + 1);
   const [hasPrime] = useState(Math.random() < 0.5);
+  useEffect(() => {
+    AOS.init({
+      delay: 1000,
+    });
+  }, []);
+
   return (
-    <div className="relative flex flex-col m-5 bg-white p-5 z-30 justify-center rounded-md">
+    <div className="relative flex flex-col m-5 bg-white p-5 z-30 justify-center rounded-md" data-aos="zoom-in-up">
       <p className="absolute top-3 right-3 text-sm italic font-semibold rounded-full bg-yellow-400 p-2">
         {category}
       </p>
@@ -43,13 +51,12 @@ const ProductCard = ({
       <p className="text-sm my-2 line-clamp-2">{description}</p>
 
       <div className="mb-3 font-semibold">
-        <Currency quantity={price} currency="GBP" />
+        <Currency quantity={price} currency="USD" />
       </div>
 
       {hasPrime && (
         <div className="flex items-center space-x-4">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Amazon_Prime_Logo.svg/2560px-Amazon_Prime_Logo.svg.png"
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Amazon_Prime_Logo.svg/2560px-Amazon_Prime_Logo.svg.png"
             alt=""
             className="w-10 h-6"
           />
